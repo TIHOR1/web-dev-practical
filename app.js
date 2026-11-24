@@ -49,7 +49,7 @@ function saveExpenses() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(expenses));
   } catch {
-    /* Storage may be unavailable. */
+    
   }
 }
 
