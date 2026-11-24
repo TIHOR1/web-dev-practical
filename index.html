@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="page-heading">
+            <h1>Student Expense Tracker</h1>
+            <p>Keep track of the small things. Stay on top of the big picture.</p>
+        </header>
+
+        <section class="total-card" aria-label="Expense summary">
+            <div>
+                <h2>Total recorded</h2>
+                <p>Across all your expenses</p>
+            </div>
+            <strong>₹5,700.00</strong>
+            <span class="expense-count">3 expenses logged</span>
+        </section>
+
+        <div class="columns">
+            <section class="panel">
+                <h2>Add an expense</h2>
+                <p class="subtitle">Small details add up. Log one now.</p>
+
+                <form>
+                    <label for="name">Expense name</label>
+                    <input id="name" type="text" placeholder="e.g. Lunch with friends">
+
+                    <div class="form-row">
+                        <div>
+                            <label for="amount">Amount</label>
+                            <div class="amount-field">
+                                <span>₹</span>
+                                <input id="amount" type="number" placeholder="0.00">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="category">Category</label>
+                            <select id="category">
+                                <option>Food</option>
+                                <option>Travel</option>
+                                <option>Shopping</option>
+                                <option>Education</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="button">＋ Add expense</button>
+                </form>
+            </section>
+
+            <section class="panel">
+                <div class="list-heading">
+                    <div>
+                        <h2>Recent expenses</h2>
+                        <p class="subtitle">Your spending, all in one place.</p>
+                    </div>
+
+                    <select aria-label="Filter expenses by category">
+                        <option>All categories</option>
+                        <option>Food</option>
+                        <option>Travel</option>
+                        <option>Shopping</option>
+                        <option>Education</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <ul class="expense-list">
+                    <li>
+                        <div><strong>lonavala</strong><span>Travel</span></div>
+                        <b>₹5,000.00</b>
+                        <button class="delete" type="button" aria-label="Delete lonavala">×</button>
+                    </li>
+                    <li>
+                        <div><strong>movie</strong><span>Other</span></div>
+                        <b>₹500.00</b>
+                        <button class="delete" type="button" aria-label="Delete movie">×</button>
+                    </li>
+                    <li>
+                        <div><strong>Dcafe</strong><span>Food</span></div>
+                        <b>₹200.00</b>
+                        <button class="delete" type="button" aria-label="Delete Dcafe">×</button>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

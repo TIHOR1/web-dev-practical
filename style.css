@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 48px 24px;
+  color: #172554;
+  background: #eef5ef;
+  font:
+    16px Arial,
+    sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.page-heading {
+  margin-bottom: 36px;
+}
+h1 {
+  margin: 0 0 14px;
+  font-size: 38px;
+}
+h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+p {
+  margin: 0;
+  color: #555;
+}
+.total-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding: 28px 36px;
+  border: 1px solid #a5b4fc;
+  border-radius: 8px;
+  color: #fff;
+  background: #1d4ed8;
+}
+.total-card h2,
+.total-card p {
+  color: #fff;
+}
+.total-card strong {
+  font-size: 36px;
+}
+.expense-count {
+  grid-column: 1 / -1;
+  color: #dbeafe;
+}
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 24px;
+}
+.panel {
+  padding: 26px;
+  border: 1px solid #c7d2fe;
+  border-radius: 8px;
+  background: #fff;
+}
+.subtitle {
+  margin-bottom: 24px;
+}
+label {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: bold;
+}
+input,
+select,
+button {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font: inherit;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.amount-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.amount-field input {
+  flex: 1;
+}
+button {
+  margin-top: 24px;
+  border: 0;
+  color: white;
+  background: #f97316;
+  font-weight: bold;
+}
+.list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 20px;
+}
+.list-heading select {
+  width: 180px;
+}
+.expense-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.expense-list li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0;
+  border-top: 1px solid #e5e7eb;
+}
+.expense-list li div {
+  display: grid;
+  gap: 8px;
+}
+.expense-list li span {
+  color: #1d4ed8;
+  font-weight: bold;
+}
+.expense-list li b {
+  white-space: nowrap;
+}
+.expense-list .delete {
+  width: 44px;
+  min-height: 44px;
+  margin: 0;
+  border: 1px solid #ccc;
+  color: #b00020;
+  background: white;
+  font-size: 22px;
+}
+@media (max-width: 760px) {
+  body {
+    padding: 28px 16px;
+  }
+  .columns {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .total-card {
+    padding: 22px;
+  }
+  .total-card strong {
+    font-size: 26px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .list-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .list-heading select {
+    width: 100%;
+  }
+  .expense-list li {
+    gap: 10px;
+  }
+}
